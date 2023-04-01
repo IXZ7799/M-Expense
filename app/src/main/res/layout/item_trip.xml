@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    tools:ignore="TextSizeCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck">
+
+        <TextView
+            android:id="@+id/nameTrip1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="@string/nameTrip1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/destination1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="@string/destination1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameTrip1" />
+
+        <TextView
+            android:id="@+id/dateTrip1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="@string/dateTrip1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/destination1" />
+
+        <TextView
+            android:id="@+id/riskAssessment1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="@string/riskAssessment1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateTrip1"
+            tools:ignore="VisualLintOverlap" />
+
+        <TextView
+            android:id="@+id/description1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="@string/description1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/riskAssessment1" />
+
+        <TextView
+            android:id="@+id/peopleAttending1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="@string/peopleAttending1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description1" />
+
+        <TextView
+            android:id="@+id/transportation1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:text="@string/transportation1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/peopleAttending1" />
+
+        <EditText
+            android:id="@+id/tvNameTripInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="name"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/nameTripInput1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/nameTrip1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor,SmallSp,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/tvDestination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="name"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/destinationInput1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/destination1"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameTripInput"
+            tools:ignore="LabelFor,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/tvDateTripInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="date"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="date"
+            android:text="@string/dateTripInput1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/dateTrip1"
+            app:layout_constraintTop_toBottomOf="@+id/tvDestination"
+            tools:ignore="LabelFor,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/tvRiskAssessmentInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="name"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/riskAssessmentInput1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/riskAssessment1"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateTripInput"
+            tools:ignore="LabelFor,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+        <EditText
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="name"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/descriptionInput1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/description1"
+            app:layout_constraintTop_toBottomOf="@+id/tvRiskAssessmentInput"
+            tools:ignore="LabelFor,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/tvPeopleAttending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="name"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="number"
+            android:text="@string/peopleAttendingInput1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/peopleAttending1"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+            tools:ignore="LabelFor,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/tvTransportation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="name"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:inputType="number"
+            android:text="@string/transportation1"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/transportation1"
+            app:layout_constraintTop_toBottomOf="@+id/peopleAttending1"
+            tools:ignore="LabelFor,TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginEnd="315dp"
+            android:contentDescription="@string/continentDesc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

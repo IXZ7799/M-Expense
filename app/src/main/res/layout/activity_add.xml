@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:orientation="vertical"
+        android:paddingVertical="100sp"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds">
+
+        <TextView
+            android:id="@+id/nameTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:text="@string/nameTrip"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/destination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:text="@string/destination"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dateTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:text="@string/dateTrip"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/riskAssessment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:text="@string/riskAssessment"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:text="@string/description"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/peopleAttending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:text="@string/peopleAttending"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/transportation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:text="@string/transportation"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout">
+
+        <EditText
+            android:id="@+id/nameTripInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="105dp"
+            android:autofillHints="name"
+            android:ems="10"
+            android:hint="@string/nameTripInput"
+            android:inputType="textPersonName"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.431"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/destinationInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:autofillHints="emailAddress"
+            android:ems="10"
+            android:hint="@string/destinationInput"
+            android:inputType="textEmailAddress"
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="90dp" />
+
+        <EditText
+            android:id="@+id/dateTripInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:autofillHints="dob"
+            android:ems="10"
+            android:hint="@string/dateTripInput"
+            android:inputType="date"
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="180dp" />
+
+        <CheckBox
+            android:id="@+id/riskAssessmentInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="16sp"
+            android:text="@string/riskAssessmentInput"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="153dp">
+        </CheckBox>
+
+        <EditText
+            android:id="@+id/descriptionInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:autofillHints="text"
+            android:ems="10"
+            android:hint="@string/descriptionInput"
+            android:inputType="text"
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="153dp" />
+
+        <EditText
+            android:id="@+id/peopleAttendingInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:autofillHints="name"
+            android:ems="10"
+            android:hint="@string/peopleAttendingInput"
+            android:inputType="number"
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="153dp" />
+
+        <EditText
+            android:id="@+id/transportationInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:autofillHints="text"
+            android:ems="10"
+            android:hint="@string/transportationInput"
+            android:inputType="text"
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="153dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/backBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/saveBtn"
+        android:onClick="saveDetails"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/selectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/selectBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/continentDesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/default_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

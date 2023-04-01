@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">M-Expense: Expense Management App</string>
+    <string name="app_desc">Help employees easily manage and record work related trip expenses.</string>
+    <string name="trip_enter_details">Enter trip details</string>
+    <string name="trip_details">View trip details</string>
+
+    <string name="selectBtn">Select Continent</string>
+    <string name="saveBtn">Save Details</string>
+    <string name="backBtn">Back</string>
+    <string name="continentDesc"></string>
+
+    <string name="nameTrip">Trip name:</string>
+    <string name="destination">Destination:</string>
+    <string name="dateTrip">Trip date:</string>
+    <string name="riskAssessment">Risk assessment:</string>
+    <string name="description">Description:</string>
+    <string name="peopleAttending">People attending:</string>
+    <string name="transportation">Transportation:</string>
+
+    <string name="nameTrip1">Trip name:</string>
+    <string name="destination1">Destination:</string>
+    <string name="dateTrip1">Trip date:</string>
+    <string name="riskAssessment1">Risk assessment:</string>
+    <string name="description1">Description:</string>
+    <string name="peopleAttending1">People attending:</string>
+    <string name="transportation1">Transportation:</string>
+
+    <string name="nameTripInput">Conference</string>
+    <string name="destinationInput">Europe</string>
+    <string name="dateTripInput">02/02/2023</string>
+    <string name="riskAssessmentInput">Yes</string>
+    <string name="descriptionInput">Long trip</string>
+    <string name="peopleAttendingInput">20</string>
+    <string name="transportationInput">Car</string>
+
+    <string name="nameTripInput1">tvNameTrip</string>
+    <string name="destinationInput1">tvDestination</string>
+    <string name="dateTripInput1">tvDateTrip</string>
+    <string name="riskAssessmentInput1">tvRiskAssessment</string>
+    <string name="descriptionInput1">tvDescription</string>
+    <string name="peopleAttendingInput1">tvPeopleAttending</string>
+    <string name="transportationInput1">tvTransportation</string>
+</resources>
