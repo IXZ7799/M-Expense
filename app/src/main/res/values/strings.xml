@@ -14,7 +14,6 @@
     <string name="deleteBtn">Delete</string>
     <string name="continentDesc">Continent</string>
     <string name="searchView">Search trips</string>
-    <string name="searchMenu">Search</string>
 
     <string name="nameTrip">Trip name:</string>
     <string name="destination">Destination:</string>
@@ -23,6 +22,11 @@
     <string name="description">Description:</string>
     <string name="peopleAttending">People attending:</string>
     <string name="transportation">Transportation:</string>
+
+    <string name="expenseType">Expense type:</string>
+    <string name="expenseAmount">Amount:</string>
+    <string name="expenseDate">Date: </string>
+    <string name="expenseDescription">Comments:</string>
 
     <string name="nameTripInput">Conference</string>
     <string name="destinationInput">Europe</string>
