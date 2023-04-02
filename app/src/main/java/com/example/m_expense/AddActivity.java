@@ -55,7 +55,11 @@ public class AddActivity extends AppCompatActivity {
             String datetrip = dateTrip.getText().toString();
             Boolean riskassessment = riskAssessment.isChecked();
             String description1 = description.getText().toString();
-            int peopleattending = Integer.parseInt(peopleAttending.getText().toString());
+            int peopleattending = 0;
+            String peopleattending1 = peopleAttending.getText().toString();
+            if (!peopleattending1.isEmpty()) {
+                peopleattending = Integer.parseInt(peopleattending1);
+            }
             String transportation1 = transportation.getText().toString();
 
             if (nametrip.isEmpty() || destination1.isEmpty() || datetrip.isEmpty()) {
