@@ -39,6 +39,7 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
             tvPeopleAttending = itemView.findViewById(R.id.tvPeopleAttending);
             tvTransportation = itemView.findViewById(R.id.tvTransportation);
             imageView1 = itemView.findViewById(R.id.imageView1);
+            deleteBtn = itemView.findViewById(R.id.deleteBtn);
         }
     }
 
