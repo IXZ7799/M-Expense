@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 .show());
     }
 
-    private void deleteTripFromDatabase(int tripId) {
+    private void deleteTrip(int tripId) {
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         dbHelper.deleteTrip(tripId);
     }

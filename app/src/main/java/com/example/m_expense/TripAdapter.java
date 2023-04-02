@@ -39,7 +39,6 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
     @Override
     public TripViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_trip, parent, false);
-
         return new TripViewHolder(v);
     }
 
@@ -62,7 +61,6 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
         holder.tvPeopleAttending.setFocusable(false);
         holder.tvTransportation.setFocusable(false);
     }
-
     @Override
     public int getItemCount() {
         return trips.size();
