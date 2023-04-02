@@ -239,7 +239,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="36dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/delete_btn"
             android:contentDescription="@string/deleteBtn"
             app:layout_constraintStart_toStartOf="parent"
@@ -247,15 +247,15 @@
             tools:ignore="TouchTargetSizeCheck" />
 
         <ImageButton
-            android:id="@+id/deleteBtn2"
+            android:id="@+id/addExpenseBtn"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="36dp"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/delete_btn"
-            android:contentDescription="@string/deleteBtn"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/expense_btn"
+            android:contentDescription="@string/expenseBtn"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editBtn"
+            app:layout_constraintTop_toBottomOf="@+id/deleteBtn"
             tools:ignore="TouchTargetSizeCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
