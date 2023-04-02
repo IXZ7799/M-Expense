@@ -39,6 +39,5 @@ public class DetailsActivity extends AppCompatActivity {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 }
