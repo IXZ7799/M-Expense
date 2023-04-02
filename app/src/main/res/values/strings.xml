@@ -9,6 +9,7 @@
     <string name="saveBtn">Save Details</string>
     <string name="backBtn">Back</string>
     <string name="editBtn">Edit</string>
+    <string name="updateBtn">Update</string>
     <string name="deleteBtn">Delete</string>
     <string name="continentDesc">Continent</string>
 
