@@ -93,9 +93,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public long insertExpenses(Expense e){
-        contentValues rowValues = new ContentValues();
+        ContentValues rowValues = new ContentValues();
 
-        rowValues.put(EXPENSE_TYPE_COLUM)
+        rowValues.put(EXPENSE_TYPE_COLUMN, e.getExpenseType());
+        rowValues.put(EXPENSE_AMOUNT_COLUMN, e.getExpenseAmount());
+        rowValues.put(EXPENSE_DATE_COLUMN, e.getExpenseDate());
+        rowValues.put(EXPENSE_DESCRIPTION_COLUMN, e.getExpenseDescription());
+
+        return database.insertOrThrow(EXPENSES_DATABASE_NAME, null, rowValues);
     }
 
     public ArrayList<Trip> getDetails(){
