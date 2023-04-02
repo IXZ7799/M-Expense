@@ -73,9 +73,8 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
 
         holder.editBtn.setOnClickListener(v -> {
             Intent intent = new Intent(context, AddActivity.class);
-            intent.putExtra("Trip", trips);
+            intent.putExtra("Trip", trips.get(position));
             context.startActivity(intent);
-
         });
 
         holder.deleteBtn.setOnClickListener(v -> {

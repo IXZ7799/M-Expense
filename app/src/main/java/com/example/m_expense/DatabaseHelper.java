@@ -109,4 +109,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return db.delete("tripdetails", "user_id=?", new String[]{String.valueOf(trip.getId())});
     }
 
+    public int updateTrip(Trip trip) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues rowValues = new ContentValues();
+        return db.update("tripdetails", rowValues, "user_id=?", new String[]{String.valueOf(trip.getId())});
+    }
+
 }

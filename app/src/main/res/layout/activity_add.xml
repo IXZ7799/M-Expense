@@ -114,10 +114,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16sp"
-            android:autofillHints="emailAddress"
+            android:autofillHints="name"
             android:ems="10"
             android:hint="@string/destinationInput"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             android:textSize="14sp"
             tools:ignore="TouchTargetSizeCheck"
             tools:layout_editor_absoluteX="153dp"
@@ -139,7 +139,7 @@
 
         <CheckBox
             android:id="@+id/riskAssessmentInput"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_marginTop="16sp"
