@@ -25,7 +25,7 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="@string/nameTrip1"
+            android:text="@string/nameTrip"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +36,7 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="@string/destination1"
+            android:text="@string/destination"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nameTrip1" />
 
@@ -47,7 +47,7 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="@string/dateTrip1"
+            android:text="@string/dateTrip"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/destination1" />
 
@@ -58,7 +58,7 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="@string/riskAssessment1"
+            android:text="@string/riskAssessment"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dateTrip1"
             tools:ignore="VisualLintOverlap" />
@@ -70,7 +70,7 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="@string/description1"
+            android:text="@string/description"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/riskAssessment1" />
 
@@ -81,7 +81,7 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="@string/peopleAttending1"
+            android:text="@string/peopleAttending"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/description1" />
 
@@ -92,7 +92,7 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
-            android:text="@string/transportation1"
+            android:text="@string/transportation"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/peopleAttending1" />
 
