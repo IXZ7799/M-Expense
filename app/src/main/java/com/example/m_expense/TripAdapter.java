@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder> {
     private final ArrayList<Trip> trips;
-    private Context context;
+    private final Context context;
 
     public TripAdapter(ArrayList<Trip> trips, Context context) {
         this.trips = trips;
