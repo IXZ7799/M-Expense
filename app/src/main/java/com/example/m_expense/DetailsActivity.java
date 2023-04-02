@@ -32,20 +32,7 @@ public class DetailsActivity extends AppCompatActivity{
         layoutManager = new LinearLayoutManager(this);
         searchView = findViewById(R.id.searchView);
         searchView.clearFocus();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
 
-            @Override
-            public boolean onQueryTextChange(String s) {
-                return true;
-            }
-        });
-        searchView.setOnClickListener(v -> {
-            String query = searchView.getQuery().toString();
-        });
     }
 
     @Override
