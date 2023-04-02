@@ -1,8 +1,11 @@
 package com.example.m_expense;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -40,6 +43,12 @@ public class UpdateTrip extends AppCompatActivity {
         peopleAttending.setText(String.valueOf(t.getPeopleAttending()));
         transportation.setText(t.getTransportation());
         imageView2.setImageResource(t.getPicture());
+
+        Button backBtn = findViewById(R.id.backBtn);
+        backBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(UpdateTrip.this, DetailsActivity.class);
+            startActivity(intent);
+        });
     }
     public void changeImage(View view) {
         int randomIndex = (int) (Math.random() * images.length);
