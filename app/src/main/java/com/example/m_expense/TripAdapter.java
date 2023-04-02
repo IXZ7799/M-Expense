@@ -75,6 +75,8 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
 
             if(result > 0){
                 Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show();
+                trips.remove(position);
+                notifyItemRemoved(position);
             }
             else{
                 Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
