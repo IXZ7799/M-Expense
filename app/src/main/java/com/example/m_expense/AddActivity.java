@@ -1,5 +1,6 @@
 package com.example.m_expense;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -64,14 +65,22 @@ public class AddActivity extends AppCompatActivity {
 
             if (nametrip.isEmpty() || destination1.isEmpty() || datetrip.isEmpty()) {
                 Toast.makeText(AddActivity.this, "Please fill all required fields", Toast.LENGTH_SHORT).show();
-            }
-            else {
-            Trip t = new Trip(currentImage, nametrip, destination1, datetrip, riskassessment, description1, peopleattending, transportation1);
-            long tripId = dbHelper.insertDetails(t);
-            Toast.makeText(this, "Trip has been created with id: " + tripId,
-                    Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(this, DetailsActivity.class);
-            startActivity(intent);
+            } else {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage("Do you want to save this trip?");
+                int finalPeopleattending = peopleattending;
+                builder.setPositiveButton("Yes", (dialog, which) -> {
+                    try (DatabaseHelper db = new DatabaseHelper(this)) {
+                        Trip t = new Trip(currentImage, nametrip, destination1, datetrip, riskassessment, description1, finalPeopleattending, transportation1);
+                        long tripId = db.insertDetails(t);
+                        Toast.makeText(this, "Trip has been created with id: " + tripId, Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(this, DetailsActivity.class);
+                        startActivity(intent);
+                    }
+                });
+                builder.setNegativeButton("No", null);
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         }
     }
