@@ -31,7 +31,6 @@ public class DetailsActivity extends AppCompatActivity{
         recyclerView = findViewById(R.id.detailsText);
         layoutManager = new LinearLayoutManager(this);
         searchView = findViewById(R.id.searchView);
-
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
