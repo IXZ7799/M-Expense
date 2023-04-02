@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
@@ -69,6 +71,13 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
         holder.deleteBtn.setOnClickListener(v -> {
             DatabaseHelper db = new DatabaseHelper(context);
             int result = db.deleteTrip(trips.get(position));
+
+            if(result > 0){
+                Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 

@@ -33,7 +33,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         try (DatabaseHelper db = new DatabaseHelper(this)) {
             ArrayList<Trip> details = db.getDetails();
-            myTripAdapter = new TripAdapter(details);
+            myTripAdapter = new TripAdapter(details, this);
             recyclerView.setAdapter(myTripAdapter);
             recyclerView.setLayoutManager(layoutManager);
         } catch (SQLException e) {
