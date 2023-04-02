@@ -98,4 +98,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         database.close();
         return listTrips;
     }
+
+    public void deleteAllTrips() {
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete("tripdetails", null, null);
+    }
+
 }
