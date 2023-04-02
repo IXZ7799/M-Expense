@@ -1,6 +1,7 @@
 package com.example.m_expense;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +27,7 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
 
         public TextView tvNameTripInput, tvDestination, tvDateTrip, tvRiskAssessment, tvDescription, tvPeopleAttending, tvTransportation;
         public ImageView imageView1;
-        public ImageButton deleteBtn;
+        public ImageButton deleteBtn, editBtn;
 
         public TripViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -40,6 +41,7 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
             tvTransportation = itemView.findViewById(R.id.tvTransportation);
             imageView1 = itemView.findViewById(R.id.imageView1);
             deleteBtn = itemView.findViewById(R.id.deleteBtn);
+            editBtn = itemView.findViewById(R.id.editBtn);
         }
     }
 
@@ -68,6 +70,13 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
         holder.tvDescription.setFocusable(false);
         holder.tvPeopleAttending.setFocusable(false);
         holder.tvTransportation.setFocusable(false);
+
+        holder.editBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(context, AddActivity.class);
+            intent.putExtra("Trip", trips);
+            context.startActivity(intent);
+
+        });
 
         holder.deleteBtn.setOnClickListener(v -> {
             DatabaseHelper db = new DatabaseHelper(context);
