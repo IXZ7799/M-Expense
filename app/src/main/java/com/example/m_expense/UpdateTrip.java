@@ -6,10 +6,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import java.text.BreakIterator;
 
 public class UpdateTrip extends AppCompatActivity {
     int id;
@@ -23,13 +20,13 @@ public class UpdateTrip extends AppCompatActivity {
 
         Trip t = (Trip) getIntent().getExtras().getSerializable("tripdetails");
 
-        EditText nameTrip = findViewById(R.id.nameTripInput);
-        EditText destination = findViewById(R.id.destinationInput);
-        EditText dateTrip = findViewById(R.id.dateTripInput);
-        CheckBox riskAssessment = findViewById(R.id.riskAssessmentInput);
-        EditText description = findViewById(R.id.descriptionInput);
-        EditText peopleAttending = findViewById(R.id.peopleAttendingInput);
-        EditText transportation = findViewById(R.id.transportationInput);
+        nameTrip = findViewById(R.id.nameTripInput);
+        destination = findViewById(R.id.destinationInput);
+        dateTrip = findViewById(R.id.dateTripInput);
+        riskAssessment = findViewById(R.id.riskAssessmentInput);
+        description = findViewById(R.id.descriptionInput);
+        peopleAttending = findViewById(R.id.peopleAttendingInput);
+        transportation = findViewById(R.id.transportationInput);
         imageView2 = findViewById(R.id.imageView2);
 
         id = t.getId();
@@ -61,12 +58,12 @@ public class UpdateTrip extends AppCompatActivity {
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         int result = dbHelper.updateTrip(t);
 
-            if(result > 0){
-                Toast.makeText(this, "Updated " + result, Toast.LENGTH_SHORT).show();
-                finish();
-            }
-            else{
-                Toast.makeText(this, "Failed " + result, Toast.LENGTH_SHORT).show();
-            }
+        if(result > 0){
+            Toast.makeText(this, "Updated " + result, Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else{
+            Toast.makeText(this, "Failed " + result, Toast.LENGTH_SHORT).show();
+        }
     }
 }
