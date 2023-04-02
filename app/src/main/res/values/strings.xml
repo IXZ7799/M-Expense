@@ -21,14 +21,6 @@
     <string name="peopleAttending">People attending:</string>
     <string name="transportation">Transportation:</string>
 
-    <string name="nameTrip1">Trip name:</string>
-    <string name="destination1">Destination:</string>
-    <string name="dateTrip1">Trip date:</string>
-    <string name="riskAssessment1">Risk assessment:</string>
-    <string name="description1">Description:</string>
-    <string name="peopleAttending1">People attending:</string>
-    <string name="transportation1">Transportation:</string>
-
     <string name="nameTripInput">Conference</string>
     <string name="destinationInput">Europe</string>
     <string name="dateTripInput">02/02/2023</string>
