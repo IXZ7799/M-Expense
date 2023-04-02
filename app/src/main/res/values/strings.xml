@@ -3,6 +3,7 @@
     <string name="app_desc">Help employees easily manage and record work related trip expenses.</string>
     <string name="trip_enter_details">Enter trip details</string>
     <string name="trip_details">View trip details</string>
+    <string name="trip_delete_details">Delete all trips</string>
 
     <string name="selectBtn">Select Continent</string>
     <string name="saveBtn">Save Details</string>
