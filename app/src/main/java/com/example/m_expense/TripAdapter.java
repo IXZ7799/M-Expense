@@ -1,6 +1,7 @@
 package com.example.m_expense;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,17 +72,18 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
         holder.tvTransportation.setFocusable(false);
 
         holder.editBtn.setOnClickListener(v -> {
-            DatabaseHelper db = new DatabaseHelper(context);
-            int result = db.updateTrip(trips.get(position));
+            Intent intent = new Intent(context, UpdateTrip.class);
+            intent.putExtra("tripdetails", trips.get(position));
+            context.startActivity(intent);
 
-            if(result > 0){
-                Toast.makeText(context, "Updated", Toast.LENGTH_SHORT).show();
-                trips.get(position);
-                notifyItemChanged(position);
-            }
-            else{
-                Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
-            }
+//            if(result > 0){
+//                Toast.makeText(context, "Updated", Toast.LENGTH_SHORT).show();
+//                trips.get(position);
+//                notifyItemChanged(position);
+//            }
+//            else{
+//                Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
+//            }
         });
 
         holder.deleteBtn.setOnClickListener(v -> {

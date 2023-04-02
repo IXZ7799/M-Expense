@@ -21,25 +21,6 @@ public class AddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        Intent intent = getIntent();
-        Trip trip = (Trip) intent.getSerializableExtra("Trip");
-        if (trip != null) {
-            EditText nameTrip = findViewById(R.id.nameTripInput);
-            EditText destination = findViewById(R.id.destinationInput);
-            EditText dateTrip = findViewById(R.id.dateTripInput);
-            CheckBox riskAssessment = findViewById(R.id.riskAssessmentInput);
-            EditText description = findViewById(R.id.descriptionInput);
-            EditText peopleAttending = findViewById(R.id.peopleAttendingInput);
-            EditText transportation = findViewById(R.id.transportationInput);
-
-            nameTrip.setText(trip.getTripName());
-            destination.setText(trip.getDestination());
-            dateTrip.setText(trip.getTripDate());
-            riskAssessment.setChecked(trip.getRiskAssessment());
-            description.setText(trip.getDescription());
-            peopleAttending.setText(String.valueOf(trip.getPeopleAttending()));
-            transportation.setText(trip.getTransportation());
-        }
         Button backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(v -> {
             Intent backIntent = new Intent(AddActivity.this, MainActivity.class);

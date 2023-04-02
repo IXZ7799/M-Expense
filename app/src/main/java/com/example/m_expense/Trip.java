@@ -46,7 +46,7 @@ public class Trip implements Serializable {
     }
 
     public String getTripDate(){return trip_date;}
-    public Boolean getRiskAssessment(){return risk_assessment;}
+    public boolean getRiskAssessment(){return risk_assessment;}
     public String getDescription(){return description;}
     public int getPeopleAttending(){return people_attending;}
     public String getTransportation(){return transportation;}
