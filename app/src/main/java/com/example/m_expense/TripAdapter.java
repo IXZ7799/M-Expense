@@ -26,7 +26,7 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
 
         public TextView tvNameTripInput, tvDestination, tvDateTrip, tvRiskAssessment, tvDescription, tvPeopleAttending, tvTransportation;
         public ImageView imageView1;
-        public ImageButton deleteBtn, editBtn;
+        public ImageButton deleteBtn, editBtn, addExpenseBtn;
 
         public TripViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -41,6 +41,7 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
             imageView1 = itemView.findViewById(R.id.imageView1);
             deleteBtn = itemView.findViewById(R.id.deleteBtn);
             editBtn = itemView.findViewById(R.id.editBtn);
+            addExpenseBtn = itemView.findViewById(R.id.addExpenseBtn);
         }
     }
 
@@ -73,6 +74,11 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
         holder.editBtn.setOnClickListener(v -> {
             Intent intent = new Intent(context, UpdateTrip.class);
             intent.putExtra("tripdetails", trips.get(position));
+            context.startActivity(intent);
+        });
+
+        holder.addExpenseBtn.setOnClickListener(v ->{
+            Intent intent = new Intent(context, AddExpense.class);
             context.startActivity(intent);
         });
 
