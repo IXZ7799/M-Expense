@@ -5,9 +5,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.text.BreakIterator;
 
 public class UpdateTrip extends AppCompatActivity {
     int id;
+    public EditText nameTrip, destination, dateTrip, description, peopleAttending, transportation;
+    public CheckBox riskAssessment;
+    public ImageView imageView2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +30,7 @@ public class UpdateTrip extends AppCompatActivity {
         EditText description = findViewById(R.id.descriptionInput);
         EditText peopleAttending = findViewById(R.id.peopleAttendingInput);
         EditText transportation = findViewById(R.id.transportationInput);
+        imageView2 = findViewById(R.id.imageView2);
 
         id = t.getId();
         nameTrip.setText(t.getTripName());
@@ -31,9 +40,33 @@ public class UpdateTrip extends AppCompatActivity {
         description.setText(t.getDescription());
         peopleAttending.setText(String.valueOf(t.getPeopleAttending()));
         transportation.setText(t.getTransportation());
+        imageView2.setImageResource(t.getPicture());
     }
 
-    public void update(View view){
+    public void updateDetails(View view){
+        String nametrip = nameTrip.getText().toString();
+        String destination1 = destination.getText().toString();
+        String datetrip = dateTrip.getText().toString();
+        Boolean riskassessment = riskAssessment.isChecked();
+        String description1 = description.getText().toString();
+        int peopleattending = 0;
+        String peopleattending1 = peopleAttending.getText().toString();
+        if (!peopleattending1.isEmpty()) {
+            peopleattending = Integer.parseInt(peopleattending1);
+        }
+        String transportation1 = transportation.getText().toString();
 
+        Trip t = new Trip(id, nametrip, destination1, datetrip, riskassessment, description1, Integer.parseInt(String.valueOf(peopleattending)), transportation1);
+
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        int result = dbHelper.updateTrip(t);
+
+            if(result > 0){
+                Toast.makeText(this, "Updated " + result, Toast.LENGTH_SHORT).show();
+                finish();
+            }
+            else{
+                Toast.makeText(this, "Failed " + result, Toast.LENGTH_SHORT).show();
+            }
     }
 }

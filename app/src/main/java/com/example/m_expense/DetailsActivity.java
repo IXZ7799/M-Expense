@@ -30,7 +30,11 @@ public class DetailsActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.detailsText);
         layoutManager = new LinearLayoutManager(this);
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
         try (DatabaseHelper db = new DatabaseHelper(this)) {
             ArrayList<Trip> details = db.getDetails();
             myTripAdapter = new TripAdapter(details, this);

@@ -109,10 +109,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return db.delete("tripdetails", "user_id=?", new String[]{String.valueOf(trip.getId())});
     }
 
-    public int updateTrip(Trip trip) {
+    public int updateTrip(Trip t) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues rowValues = new ContentValues();
-        return db.update("tripdetails", rowValues, "user_id=?", new String[]{String.valueOf(trip.getId())});
+        rowValues.put(PICTURE_COLUMN, t.getPicture());
+        rowValues.put(TRIPNAME_COLUMN, t.getTripName());
+        rowValues.put(DESTINATION_COLUMN, t.getDestination());
+        rowValues.put(TRIPDATE_COLUMN, t.getTripDate());
+        rowValues.put(RISKASSESSMENT_COLUMN, t.getRiskAssessment());
+        rowValues.put(DESCRIPTION_COLUMN, t.getDescription());
+        rowValues.put(PEOPLEATTENDING_COLUMN, t.getPeopleAttending());
+        rowValues.put(TRANSPORTATION_COLUMN, t.getTransportation());
+        return db.update("tripdetails", rowValues, "user_id=?", new String[]{String.valueOf(t.getId())});
     }
 
 }

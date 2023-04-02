@@ -75,15 +75,6 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
             Intent intent = new Intent(context, UpdateTrip.class);
             intent.putExtra("tripdetails", trips.get(position));
             context.startActivity(intent);
-
-//            if(result > 0){
-//                Toast.makeText(context, "Updated", Toast.LENGTH_SHORT).show();
-//                trips.get(position);
-//                notifyItemChanged(position);
-//            }
-//            else{
-//                Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
-//            }
         });
 
         holder.deleteBtn.setOnClickListener(v -> {
