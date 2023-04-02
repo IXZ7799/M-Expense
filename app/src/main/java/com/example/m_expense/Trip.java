@@ -1,8 +1,9 @@
 package com.example.m_expense;
 
 public class Trip {
-    private int id, people_attending;
-    private boolean risk_assessment;
+    private int id;
+    private final int people_attending;
+    private final boolean risk_assessment;
     private final int picture;
     private final String trip_name, destination, trip_date, description, transportation;
 

@@ -39,9 +39,4 @@ public class MainActivity extends AppCompatActivity {
                 .setNegativeButton("No", null)
                 .show());
     }
-
-    private void deleteTrip(int tripId) {
-        DatabaseHelper dbHelper = new DatabaseHelper(this);
-        dbHelper.deleteTrip(tripId);
-    }
 }
