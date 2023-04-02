@@ -11,7 +11,6 @@ import java.util.ArrayList;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "tripdetails";
-
     public static final String ID_COLUMN = "user_id";
     public static final String PICTURE_COLUMN = "picture_id";
     public static final String TRIPNAME_COLUMN = "trip_name";
@@ -21,6 +20,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DESCRIPTION_COLUMN = "description";
     public static final String PEOPLEATTENDING_COLUMN = "people_attending";
     public static final String TRANSPORTATION_COLUMN = "transportation";
+
+    private static final String EXPENSES_TABLE_NAME = "expenses";
+    public static final String EXPENSE_ID_COLUMN = "expense_id";
+    public static final String EXPENSE_TYPE_COLUMN = "expense_type";
+    public static final String AMOUNT_COLUMN = "expense_amount";
+    public static final String EXPENSE_DATE_COLUMN = "expense_date";
+    public static final String TRIP_ID_FOREIGN_KEY_COLUMN = "trip_id";
 
     private final SQLiteDatabase database;
 
