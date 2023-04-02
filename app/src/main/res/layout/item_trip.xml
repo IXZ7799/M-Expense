@@ -220,5 +220,29 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ImageContrastCheck" />
 
+        <ImageButton
+            android:id="@+id/editBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/editBtn"
+            android:background="@drawable/edit_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView1"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/deleteBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/deleteBtn"
+            android:background="@drawable/delete_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView1"
+            tools:ignore="TouchTargetSizeCheck" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

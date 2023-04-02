@@ -9,7 +9,8 @@
     <string name="saveBtn">Save Details</string>
     <string name="backBtn">Back</string>
     <string name="editBtn">Edit</string>
-    <string name="continentDesc"></string>
+    <string name="deleteBtn">Delete</string>
+    <string name="continentDesc">Continent</string>
 
     <string name="nameTrip">Trip name:</string>
     <string name="destination">Destination:</string>
