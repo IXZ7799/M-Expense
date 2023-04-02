@@ -8,6 +8,7 @@
     <string name="selectBtn">Select Continent</string>
     <string name="saveBtn">Save Details</string>
     <string name="backBtn">Back</string>
+    <string name="editBtn">Edit</string>
     <string name="continentDesc"></string>
 
     <string name="nameTrip">Trip name:</string>
