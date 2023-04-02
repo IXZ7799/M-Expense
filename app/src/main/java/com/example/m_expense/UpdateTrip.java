@@ -43,7 +43,7 @@ public class UpdateTrip extends AppCompatActivity {
     }
     public void changeImage(View view) {
         int randomIndex = (int) (Math.random() * images.length);
-        ImageView imageView = findViewById(R.id.imageView);
+        ImageView imageView = findViewById(R.id.imageView2);
         currentImage = images[randomIndex];
         imageView.setImageResource(currentImage);
     }
