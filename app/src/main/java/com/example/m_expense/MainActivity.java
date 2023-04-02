@@ -27,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        Button tripExpensesBtn = findViewById(R.id.tripExpensesBtn);
+        tripExpensesBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, AddExpense.class);
+            startActivity(intent);
+        });
+
         Button deleteAllDetailsBtn = findViewById(R.id.deleteAllDetailsBtn);
         deleteAllDetailsBtn.setOnClickListener(v -> new AlertDialog.Builder(MainActivity.this)
                 .setTitle("Delete all trips")
