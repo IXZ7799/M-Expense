@@ -57,6 +57,24 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/tripExpensesBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/trip_add_expenses"
+            android:layout_marginTop="25dp"
+            android:stateListAnimator="@null"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="-320dp"
+        android:layout_marginTop="360dp"
+        android:background="@drawable/rounded_box"
+        android:orientation="horizontal">
+
+        <Button
             android:id="@+id/tripDetailsBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -70,7 +88,7 @@
         android:layout_width="320dp"
         android:layout_height="100dp"
         android:layout_marginStart="-320dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="490dp"
         android:background="@drawable/rounded_box"
         android:orientation="horizontal">
 
