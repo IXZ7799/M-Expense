@@ -1,6 +1,5 @@
 package com.example.m_expense;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,13 +7,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
-import java.util.List;
 
 public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder> {
     private final ArrayList<Trip> trips;
-    private DatabaseHelper dbHelper;
 
     public TripAdapter(ArrayList<Trip> trips) {
         this.trips = trips;
@@ -24,7 +20,6 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
 
         public TextView tvNameTripInput, tvDestination, tvDateTrip, tvRiskAssessment, tvDescription, tvPeopleAttending, tvTransportation;
         public ImageView imageView1;
-        public ImageView deleteBtn;
 
         public TripViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -37,7 +32,6 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
             tvPeopleAttending = itemView.findViewById(R.id.tvPeopleAttending);
             tvTransportation = itemView.findViewById(R.id.tvTransportation);
             imageView1 = itemView.findViewById(R.id.imageView1);
-            deleteBtn = itemView.findViewById(R.id.deleteBtn);
         }
     }
 
@@ -66,14 +60,6 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
         holder.tvDescription.setFocusable(false);
         holder.tvPeopleAttending.setFocusable(false);
         holder.tvTransportation.setFocusable(false);
-
-        holder.deleteBtn.setOnClickListener((View.OnClickListener) v -> {
-            Trip trip = trips.get(position);
-            dbHelper.deleteTrip(trip.getId());
-            trips.remove(position);
-            notifyItemRemoved(position);
-        });
-
     }
 
     @Override
@@ -81,10 +67,5 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
         return trips.size();
     }
 
-    public TripAdapter(List<Trip> trips, Context context) {
-        this.trips = (ArrayList<Trip>) trips;
-        this.context = context;
-        dbHelper = new DatabaseHelper(context);
-    }
 
 }
