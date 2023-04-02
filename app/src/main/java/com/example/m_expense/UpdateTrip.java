@@ -13,6 +13,8 @@ public class UpdateTrip extends AppCompatActivity {
     public EditText nameTrip, destination, dateTrip, description, peopleAttending, transportation;
     public CheckBox riskAssessment;
     public ImageView imageView2;
+    int[] images = {R.drawable.earth_africa, R.drawable.earth_americas, R.drawable.earth_asia, R.drawable.earth_europe, R.drawable.earth_oceania};
+    int currentImage = R.drawable.default_image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +41,14 @@ public class UpdateTrip extends AppCompatActivity {
         transportation.setText(t.getTransportation());
         imageView2.setImageResource(t.getPicture());
     }
+    public void changeImage(View view) {
+        int randomIndex = (int) (Math.random() * images.length);
+        ImageView imageView = findViewById(R.id.imageView);
+        currentImage = images[randomIndex];
+        imageView.setImageResource(currentImage);
+    }
 
-    public void updateDetails(View view){
+    public void updateDetails(View v){
         String nametrip = nameTrip.getText().toString();
         String destination1 = destination.getText().toString();
         String datetrip = dateTrip.getText().toString();
@@ -53,7 +61,7 @@ public class UpdateTrip extends AppCompatActivity {
         }
         String transportation1 = transportation.getText().toString();
 
-        Trip t = new Trip(id, nametrip, destination1, datetrip, riskassessment, description1, Integer.parseInt(String.valueOf(peopleattending)), transportation1);
+        Trip t = new Trip(id, currentImage, nametrip, destination1, datetrip, riskassessment, description1, Integer.parseInt(String.valueOf(peopleattending)), transportation1);
 
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         int result = dbHelper.updateTrip(t);
