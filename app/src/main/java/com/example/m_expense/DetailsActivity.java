@@ -31,7 +31,33 @@ public class DetailsActivity extends AppCompatActivity{
         recyclerView = findViewById(R.id.detailsText);
         layoutManager = new LinearLayoutManager(this);
         searchView = findViewById(R.id.searchView);
-        searchView.clearFocus();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                try (DatabaseHelper db = new DatabaseHelper(DetailsActivity.this)) {
+                    ArrayList<Trip> details = db.getDetails();
+                    ArrayList<Trip> filteredDetails = new ArrayList<>();
+                    for (Trip trip : details) {
+                        String tripName = trip.getTripName().toLowerCase();
+                        String destination = trip.getDestination().toLowerCase();
+                        if (tripName.contains(newText.toLowerCase()) || destination.contains(newText.toLowerCase())) {
+                            filteredDetails.add(trip);
+                        }
+                    }
+                    myTripAdapter = new TripAdapter(filteredDetails, DetailsActivity.this);
+                    recyclerView.setAdapter(myTripAdapter);
+                    recyclerView.setLayoutManager(layoutManager);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+                return true;
+            }
+        });
 
     }
 
