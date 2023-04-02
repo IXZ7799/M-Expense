@@ -38,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .setNegativeButton("No", null)
                 .show());
+    }
 
+    private void deleteTripFromDatabase(int tripId) {
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        dbHelper.deleteTrip(tripId);
     }
 }
