@@ -21,11 +21,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String PEOPLEATTENDING_COLUMN = "people_attending";
     public static final String TRANSPORTATION_COLUMN = "transportation";
 
-    private static final String EXPENSES_TABLE_NAME = "expenses";
+    private static final String EXPENSES_DATABASE_NAME = "expenses";
     public static final String EXPENSE_ID_COLUMN = "expense_id";
     public static final String EXPENSE_TYPE_COLUMN = "expense_type";
-    public static final String AMOUNT_COLUMN = "expense_amount";
+    public static final String EXPENSE_AMOUNT_COLUMN = "expense_amount";
     public static final String EXPENSE_DATE_COLUMN = "expense_date";
+    public static final String EXPENSE_DESCRIPTION_COLUMN = "expense_description";
     public static final String TRIP_ID_FOREIGN_KEY_COLUMN = "trip_id";
 
     private final SQLiteDatabase database;
@@ -44,6 +45,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             DATABASE_NAME, ID_COLUMN, PICTURE_COLUMN, TRIPNAME_COLUMN, DESTINATION_COLUMN, TRIPDATE_COLUMN, RISKASSESSMENT_COLUMN, DESCRIPTION_COLUMN, PEOPLEATTENDING_COLUMN, TRANSPORTATION_COLUMN);
 
+    private static final String EXPENSE_DATABASE_CREATE = String.format(
+            "CREATE TABLE %s (" +
+                    "%s INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "%s TEXT, " +
+                    "%s INT, " +
+                    "%s TEXT, " +
+                    "%s TEXT, " +
+                    "%s INT) ",
+
+            EXPENSES_DATABASE_NAME, EXPENSE_ID_COLUMN, EXPENSE_TYPE_COLUMN, EXPENSE_AMOUNT_COLUMN, EXPENSE_DATE_COLUMN, EXPENSE_DESCRIPTION_COLUMN, TRIP_ID_FOREIGN_KEY_COLUMN);
+
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
         database = getWritableDatabase();
@@ -52,14 +64,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(DATABASE_CREATE);
+        db.execSQL(EXPENSE_DATABASE_CREATE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + DATABASE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + EXPENSES_DATABASE_NAME);
 
-        Log.v(this.getClass().getName(), DATABASE_NAME +
-                " database upgrade to version " + newVersion + " - old data lost");
+        Log.v(this.getClass().getName(), DATABASE_NAME + " database upgrade to version " + newVersion + " - old data lost");
+        Log.v(this.getClass().getName(), EXPENSES_DATABASE_NAME + " database upgrade to version " + newVersion + " - old data lost");
         onCreate(db);
     }
 
@@ -76,6 +90,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         rowValues.put(TRANSPORTATION_COLUMN, t.getTransportation());
 
         return database.insertOrThrow(DATABASE_NAME, null, rowValues);
+    }
+
+    public long insertExpenses(Expense e){
+        contentValues rowValues = new ContentValues();
+
+        rowValues.put(EXPENSE_TYPE_COLUM)
     }
 
     public ArrayList<Trip> getDetails(){
