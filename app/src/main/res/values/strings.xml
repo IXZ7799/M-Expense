@@ -13,6 +13,7 @@
     <string name="deleteBtn">Delete</string>
     <string name="continentDesc">Continent</string>
     <string name="searchView">Search trips</string>
+    <string name="searchMenu">Search</string>
 
     <string name="nameTrip">Trip name:</string>
     <string name="destination">Destination:</string>
