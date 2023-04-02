@@ -4,9 +4,8 @@ import java.io.Serializable;
 
 public class Trip implements Serializable {
     private int id;
-    private final int people_attending;
     private final boolean risk_assessment;
-    private final int picture;
+    private final int picture, people_attending;
     private final String trip_name, destination, trip_date, description, transportation;
 
     public Trip(int id, int picture, String trip_name, String destination, String trip_date, Boolean risk_assessment, String description, int people_attending, String transportation) {
