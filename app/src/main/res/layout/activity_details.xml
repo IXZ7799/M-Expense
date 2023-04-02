@@ -33,16 +33,18 @@
             app:layout_constraintStart_toStartOf="parent" />
     </ScrollView>
 
-    <SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:background="@drawable/search_view"
+        android:inputType="text"
         app:iconifiedByDefault="false"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:queryHint="@string/searchView"
-        tools:ignore="VisualLintBounds" />
+        tools:ignore="VisualLintBounds">
+    </androidx.appcompat.widget.SearchView>
 </androidx.constraintlayout.widget.ConstraintLayout>
