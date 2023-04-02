@@ -8,14 +8,16 @@ import android.content.Intent;
 import android.database.SQLException;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.SearchView;
 
 import java.util.ArrayList;
 
-public class DetailsActivity extends AppCompatActivity {
+public class DetailsActivity extends AppCompatActivity implements SearchView.OnQueryTextListener{
 
     RecyclerView.Adapter myTripAdapter;
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,9 @@ public class DetailsActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.detailsText);
         layoutManager = new LinearLayoutManager(this);
+        searchView = findViewById(R.id.searchView);
+        searchView.setOnQueryTextListener(this);
+        searchView.setSubmitButtonEnabled(false);
     }
 
     @Override
@@ -43,5 +48,18 @@ public class DetailsActivity extends AppCompatActivity {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        ArrayList<Trip> details = new ArrayList<>();
+        myTripAdapter = new TripAdapter(details, this);
+        recyclerView.setAdapter(myTripAdapter);
+        return true;
     }
 }
