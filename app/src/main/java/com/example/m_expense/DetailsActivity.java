@@ -44,7 +44,8 @@ public class DetailsActivity extends AppCompatActivity{
                     for (Trip trip : details) {
                         String tripName = trip.getTripName().toLowerCase();
                         String destination = trip.getDestination().toLowerCase();
-                        if (tripName.contains(newText.toLowerCase()) || destination.contains(newText.toLowerCase())) {
+                        String tripDate = trip.getTripDate().toLowerCase();
+                        if (tripName.contains(newText.toLowerCase()) || destination.contains(newText.toLowerCase()) || tripDate.contains(newText.toLowerCase())) {
                             filteredDetails.add(trip);
                         }
                     }
