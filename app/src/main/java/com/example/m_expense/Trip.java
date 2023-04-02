@@ -1,6 +1,8 @@
 package com.example.m_expense;
 
-public class Trip {
+import java.io.Serializable;
+
+public class Trip implements Serializable {
     private int id;
     private final int people_attending;
     private final boolean risk_assessment;
