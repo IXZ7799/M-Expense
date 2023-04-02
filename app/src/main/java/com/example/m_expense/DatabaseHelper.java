@@ -106,6 +106,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public int deleteTrip(Trip trip) {
         SQLiteDatabase db = getWritableDatabase();
-        return db.delete("tripdetails", "user_id=?", new String[]{String.valueOf(trip)});
+        return db.delete("tripdetails", "user_id=?", new String[]{String.valueOf(trip.getId())});
     }
+
 }
