@@ -58,17 +58,17 @@ public class AddActivity extends AppCompatActivity {
             int peopleattending = Integer.parseInt(peopleAttending.getText().toString());
             String transportation1 = transportation.getText().toString();
 
+            if (nametrip.isEmpty() || destination1.isEmpty() || datetrip.isEmpty()) {
+                Toast.makeText(AddActivity.this, "Please fill all required fields", Toast.LENGTH_SHORT).show();
+            }
+            else {
             Trip t = new Trip(currentImage, nametrip, destination1, datetrip, riskassessment, description1, peopleattending, transportation1);
-
             long tripId = dbHelper.insertDetails(t);
-
             Toast.makeText(this, "Trip has been created with id: " + tripId,
                     Toast.LENGTH_LONG).show();
-
             Intent intent = new Intent(this, DetailsActivity.class);
             startActivity(intent);
-        } catch (Exception e) {
-            e.printStackTrace();
+            }
         }
     }
 }
