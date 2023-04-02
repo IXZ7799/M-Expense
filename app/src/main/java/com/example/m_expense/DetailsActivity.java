@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.database.SQLException;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.SearchView;
+import androidx.appcompat.widget.SearchView;
 import java.util.ArrayList;
 
 public class DetailsActivity extends AppCompatActivity{
