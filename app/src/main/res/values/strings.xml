@@ -36,6 +36,11 @@
     <string name="peopleAttendingInput">20</string>
     <string name="transportationInput">Car</string>
 
+    <string name="expenseTypeInput">Travel</string>
+    <string name="expenseAmountInput">£50</string>
+    <string name="expenseDateInput">02/04/2023</string>
+    <string name="expenseDescriptionInput">Ran out of gas</string>
+
     <string name="nameTripInput1">tvNameTrip</string>
     <string name="destinationInput1">tvDestination</string>
     <string name="dateTripInput1">tvDateTrip</string>
