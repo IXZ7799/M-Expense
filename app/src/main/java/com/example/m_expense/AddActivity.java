@@ -45,10 +45,8 @@ public class AddActivity extends AppCompatActivity {
             Intent backIntent = new Intent(AddActivity.this, MainActivity.class);
             startActivity(backIntent);
         });
-
         Button saveBtn = findViewById(R.id.saveBtn);
         saveBtn.setOnClickListener(v -> saveDetails());
-
         Button selectBtn = findViewById(R.id.selectBtn);
         selectBtn.setOnClickListener(v -> changeImage());
     }
