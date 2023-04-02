@@ -1,8 +1,10 @@
 package com.example.m_expense;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -11,15 +13,18 @@ import java.util.ArrayList;
 
 public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder> {
     private final ArrayList<Trip> trips;
+    private Context context;
 
-    public TripAdapter(ArrayList<Trip> trips) {
+    public TripAdapter(ArrayList<Trip> trips, Context context) {
         this.trips = trips;
+        this.context = context;
     }
 
     public static class TripViewHolder extends RecyclerView.ViewHolder {
 
         public TextView tvNameTripInput, tvDestination, tvDateTrip, tvRiskAssessment, tvDescription, tvPeopleAttending, tvTransportation;
         public ImageView imageView1;
+        public ImageButton deleteBtn;
 
         public TripViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -60,6 +65,11 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.TripViewHolder
         holder.tvDescription.setFocusable(false);
         holder.tvPeopleAttending.setFocusable(false);
         holder.tvTransportation.setFocusable(false);
+
+        holder.deleteBtn.setOnClickListener(v -> {
+            DatabaseHelper db = new DatabaseHelper(context);
+            int result = db.deleteTrip(trips.get(position));
+        });
     }
 
     @Override
