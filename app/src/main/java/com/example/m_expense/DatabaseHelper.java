@@ -112,7 +112,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public int updateTrip(Trip trip) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues rowValues = new ContentValues();
+        rowValues.put("tripName", trip.getTripName());
+        rowValues.put("destination", trip.getDestination());
+        rowValues.put("tripDate", trip.getTripDate());
+        rowValues.put("riskAssessment", trip.getRiskAssessment());
+        rowValues.put("description", trip.getDescription());
+        rowValues.put("peopleAttending", trip.getPeopleAttending());
+        rowValues.put("transportation", trip.getTransportation());
         return db.update("tripdetails", rowValues, "user_id=?", new String[]{String.valueOf(trip.getId())});
     }
-
 }
