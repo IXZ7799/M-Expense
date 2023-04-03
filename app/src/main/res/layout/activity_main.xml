@@ -42,10 +42,11 @@
             android:id="@+id/enterTripDetailsBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/trip_enter_details"
             android:layout_marginTop="25dp"
-            android:stateListAnimator="@null"/>
+            android:layout_weight="1"
+            android:stateListAnimator="@null"
+            android:text="@string/trip_enter_details"
+            android:textColor="#000000" />
     </LinearLayout>
 
     <LinearLayout
@@ -60,10 +61,11 @@
             android:id="@+id/tripDetailsBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/trip_details"
             android:layout_marginTop="25dp"
-            android:stateListAnimator="@null"/>
+            android:layout_weight="1"
+            android:stateListAnimator="@null"
+            android:text="@string/trip_details"
+            android:textColor="#000000" />
     </LinearLayout>
 
     <LinearLayout
@@ -78,10 +80,11 @@
             android:id="@+id/deleteAllDetailsBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/trip_delete_details"
             android:layout_marginTop="25dp"
-            android:stateListAnimator="@null"/>
+            android:layout_weight="1"
+            android:stateListAnimator="@null"
+            android:text="@string/trip_delete_details"
+            android:textColor="#000000" />
     </LinearLayout>
 </LinearLayout>
 

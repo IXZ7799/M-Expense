@@ -22,8 +22,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/selectBtn"
         android:onClick="changeImage"
+        android:text="@string/selectBtn"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
@@ -37,6 +38,7 @@
         android:layout_marginBottom="16dp"
         android:onClick="updateDetails"
         android:text="@string/updateBtn"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -46,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="@string/backBtn"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/updateBtn"
         app:layout_constraintHorizontal_bias="0.074"
