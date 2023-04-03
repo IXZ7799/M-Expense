@@ -34,7 +34,7 @@
             <ScrollView
                 android:id="@+id/scrollView2"
                 android:layout_width="413dp"
-                android:layout_height="603dp"
+                android:layout_height="626dp"
                 app:layout_constraintBottom_toTopOf="@+id/backBtn"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
